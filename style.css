@@ -1,0 +1,113 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Raleway", sans-serif;
+    letter-spacing: 1px;
+}
+
+body{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url(images/bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+html::selection{
+    background-color: black;
+}
+
+.heading{
+    margin-bottom: 20px;
+    color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 0.2px solid rgb(245, 245, 245, 0.5);
+    width: fit-content;
+    padding: 40px;
+    gap: 20px;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.5);
+}
+
+label{
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: white;
+}
+
+input, textarea{
+    padding: 15px 30px;
+    width: 300px;
+    border-radius: 15px;
+    border: none;
+    background-color: rgb(255, 255, 255, 0.5);
+    color: black;
+}
+
+input:focus, textarea:focus{
+    outline: none;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 30px;
+    font-size: 15px;
+    border: none;
+    border-radius: 30px;
+    background-color: white;
+    color: rgb(26, 26, 26);
+    font-weight: bold;
+    gap: 10px;
+    box-shadow: 0px 4px 5px rgb(0, 0, 0, 0.5);
+}
+
+button:hover{
+    background-color: rgb(26, 26, 26);
+    color: white;
+}
+
+@media (max-width:600px) {
+    .heading{
+        text-align: center;
+    }
+    form{
+        margin: 20px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 10px;
+    }
+    label{
+        width: 100%;
+        height: fit-content;
+    }
+    input, textarea{
+        width: 50vw;
+    }
+}
